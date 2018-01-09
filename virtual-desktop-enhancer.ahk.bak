@@ -154,8 +154,8 @@ findDownWindow() {
     
 
 ;findLeftWindow()
-~LWin & Left::findLeftWindow()
-~LWin & Right::findRightWindow()
-~LWin & Up::findUpWindow()
-~LWin & Down::findDownWindow()
+~LWin & H::findLeftWindow()
+~LWin & L::findRightWindow()
+~LWin & K::findUpWindow()
+~LWin & J::findDownWindow()
 
