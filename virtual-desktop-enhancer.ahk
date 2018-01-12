@@ -132,11 +132,11 @@ findUpWindow() {
 findDownWindow() {
     WinGetActiveTitle, OutputVar
     UniqueID := WinActive(OutputVar)
-    WinGetPos, x, y,,, ahk_id %UniqueID%
+    WinGetPos, x, y, width, height, ahk_id %UniqueID%
     
+    y := y + height - 15
     posWin :=
     minDist := 9999999
-    
     winlist := getWindowsList()
     for index, win in winlist {
         WinGetPos, px, py,,, ahk_id %win%
@@ -154,8 +154,8 @@ findDownWindow() {
     
 
 ;findLeftWindow()
-~LWin & Left::findLeftWindow()
-~LWin & Right::findRightWindow()
-~LWin & Up::findUpWindow()
-~LWin & Down::findDownWindow()
+~LWin & h::findLeftWindow()
+~LWin & j::findDownWindow()
+~LWin & k::findUpWindow()
+~LWin & l::findRightWindow()
 
